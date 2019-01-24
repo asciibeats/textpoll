@@ -1,4 +1,4 @@
-# textpoll
+# TextPoll
 A simple php framework with integrated template engine
 
 ## Usage
