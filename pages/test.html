@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TextPoll test</title>
+		<link type="text/css" rel="stylesheet" href="static/test/main.css">
+		<script src="static/test/main.js"></script>  
+	</head>
+	<body>
+		<h3>Nested element:</h3>
+		@element 'test/nested'
+		<h3>Element in for-loop:</h3>
+		@for ($i = 0; $i < 3; $i++)
+			@element 'test/hello'
+		@end
+		<h3>Echo in for-loop:</h3>
+		@for ($i = 0; $i < 3; $i++)
+			<p>@echo $i.' Something'</p>
+		@end
+		<h3>Other control structures:</h3>
+		@if (true)
+			<p>If</p>
+		@end
+		@if (false)
+			<p>If</p>
+		@elseif (true)
+			<p>Elseif</p>
+		@end
+		@if (false)
+			<p>If</p>
+		@elseif (false)
+			<p>Elseif</p>
+		@else
+			<p>Else</p>
+			@if (true)
+				<p>Nested If</p>
+			@end
+		@end
+	</body>
+</html>
